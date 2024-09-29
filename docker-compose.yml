@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: movielens
+    volumes:
+      - ./mysql-db:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - my-network
+
+  jupyter-python:
+    image: jupyter/scipy-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter-python:/home/jovyan/work
+    depends_on:
+      - mysql-db
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

@@ -1,0 +1,4 @@
+mysql-db/*.cnf
+mysql-db/*.log
+mysql-db/*.index
+mysql-db/mysql.sock
