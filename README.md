@@ -23,3 +23,4 @@ Because I already had MySQL Workbench GUI installed on my computer I used it to 
 
 ## Data_extraction
 The next and the last phase of the project was to answer 6 questions by querying and transforming data from the database. I used python, pandas and mysql-connector to achieve that. Before using jupyter notebook in the docker container I had to search for a token in container logs ('docker logs <container_name>') and then after connecting to the localhost 8888 port I had to input that token to gain access. Afterward I imported necessary libraries and established a connection with the database. From that point on I could query the DB and get the information that I needed.
+[View PDF of the jupyter notebook](./data_extraction.pdf)
